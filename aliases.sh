@@ -1,4 +1,5 @@
 export GREP_COLOR='1;31'
+export LC_ALL="zh_CN.UTF-8"
 
 if [ `uname` = "Darwin" ]; then
     export PATH="/usr/local/sbin:$PATH"
@@ -24,12 +25,13 @@ alias tkill='tmux kill-session -t'
 alias aria='aria2c -c -x 16 --file-allocation=none'
 alias axel='axel -n 30'
 alias myip='curl -s https://seamile.cn/myip'
-alias ping='ping -i 0.2 -c 10'
+alias ping='ping -i 0.5 -c 10'
 alias vnccnt='netstat -nat|grep -w 5900|grep -c ESTABLISHED '
 
 # macOS alias
 if [ `uname` = "Darwin" ]; then
     export HOMEBREW_NO_AUTO_UPDATE=true  # disable homebrew auto update
+    export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.aliyun.com/homebrew/homebrew-bottles"
     alias tailf='tail -F'
     alias rmds='find . -type f -name .DS_Store -delete'
     alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
@@ -47,6 +49,7 @@ alias ipy='ipython'
 alias ipy2='ipython2'
 alias ipy3='ipython3'
 alias venv='python -m venv'
+alias virtualenv='python -m venv'
 alias jpy='jupyter notebook'
 alias pep='pycodestyle --ignore=E501'
 alias rmpyc='find . | grep -wE "py[co]|__pycache__" | xargs rm -rvf'
