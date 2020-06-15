@@ -118,15 +118,15 @@ sdown() {
 }
 
 # md5sum
-md5sum() {
-    for fname in $@
-    do
-        if [ -f $fname ]; then
-            checksum=`md5 -q $fname`
-            echo "$checksum  $fname"
-        fi
-    done
-}
+# md5sum() {
+#     for fname in $@
+#     do
+#         if [ -f $fname ]; then
+#             checksum=`md5 -q $fname`
+#             echo "$checksum  $fname"
+#         fi
+#     done
+# }
 
 
 # find the process which use the port
