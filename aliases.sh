@@ -21,7 +21,6 @@ alias grep='grep -I --color=auto --exclude-dir={.git,.hg,.svn,.venv}'
 alias psgrep='ps ax|grep -v grep|grep'
 alias tree='tree -C --dirsfirst'
 alias less='less -N'
-alias tkill='tmux kill-session -t'
 alias aria='aria2c -c -x 16 --file-allocation=none'
 alias axel='axel -n 30'
 alias myip='curl -s https://seamile.cn/myip'
@@ -66,27 +65,27 @@ alias gco='git checkout'
 alias gmg='git merge --no-commit --squash'
 
 # brew
-if which brew > /dev/null; then
-    # BREWHOME=`brew --prefix`
-    BREWHOME="/usr/local"
-    export LDFLAGS="-L$BREWHOME/lib"
-    export CPPFLAGS="-I$BREWHOME/include"
-    export PKG_CONFIG_PATH="$BREWHOME/lib/pkgconfig"
-fi
+# if which brew > /dev/null; then
+#     # BREWHOME=`brew --prefix`
+#     BREWHOME="/usr/local"
+#     export LDFLAGS="-L$BREWHOME/lib"
+#     export CPPFLAGS="-I$BREWHOME/include"
+#     export PKG_CONFIG_PATH="$BREWHOME/lib/pkgconfig"
+# fi
 
 # Golang env
-export GOPATH="$HOME/src/Golang"
-export PATH="$GOPATH/bin:$PATH"
+# export GOPATH="$HOME/src/Golang"
+# export PATH="$GOPATH/bin:$PATH"
 
 # Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if which pyenv > /dev/null; then
-    # eval "$(pyenv init -)";
-    # eval "$(pyenv virtualenv-init -)"
-    # pyenv alias
-    alias pyv='pyenv versions'
-    alias chpy='pyenv global'
-    alias chlpy='pyenv local'
-    alias chgpy='pyenv global'
-fi
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# if which pyenv > /dev/null; then
+#     # eval "$(pyenv init -)";
+#     # eval "$(pyenv virtualenv-init -)"
+#     # pyenv alias
+#     alias pyv='pyenv versions'
+#     alias chpy='pyenv global'
+#     alias chlpy='pyenv local'
+#     alias chgpy='pyenv global'
+# fi
