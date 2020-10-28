@@ -5,7 +5,7 @@ CURRENT_DIR=$PWD
 RC_DIR="$HOME/.rc.d"
 LOCAL_BIN="$HOME/.local/bin"
 
-PYTHON_VERSION='3.8.2'
+PYTHON_VERSION='3.8.3'
 BREW_URL='https://raw.githubusercontent.com/Homebrew/install/master/install'
 OH_MY_ZSH_URL='https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh'
 POWERLINE_FONTS_URL='https://github.com/powerline/fonts.git'
@@ -15,7 +15,7 @@ UTILS_URL='https://github.com/seamile/utils.git'
 
 
 function exist() {
-    which $1 > /dev/null
+    command -v $1 >/dev/null 2>&1
     return $?
 }
 
@@ -246,8 +246,8 @@ select a function code:
 【 8 】 Setup utils
 【 9 】 Setup env
 【 0 】 Setup zsh theme
-【 a 】 Install all;;
-【 x 】 Install softwares for macos;;
+【 a 】 Install all
+【 x 】 Install softwares for macos
 【 * 】 Exit
 ===============================
 EOF

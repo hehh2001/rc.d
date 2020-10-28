@@ -1,18 +1,15 @@
 rc.d
 ====
 
-My rc files and other configs here.
+My rc files and other configs.
 
 ## Depend
 
-- wget
 - curl
-- sudo
 - git
 
 ## Install
 
 ```
-wget https://raw.githubusercontent.com/seamile/rc.d/master/install.sh
-bash install.sh a
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/seamile/rc.d/master/install.sh)"
 ```
